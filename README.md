@@ -1,17 +1,17 @@
 # Hoodie-Season
 
-An app designed to answer the age old question... `it hoodie season yet?`
+An app designed to answer the age old question... *is it hoodie season yet?*
 
 ## Download Instructions
 
-- Clone this repo `git@github.com:rosendopili/Hoodie-Season.git`
+Clone this repo `git@github.com:rosendopili/Hoodie-Season.git`
 
 ## Technologies used
 
--HTML 
--CSS 
--JavaScript 
--Openweather API
+* HTML 
+* CSS 
+* JavaScript 
+* Openweather API
 
 ## General use
 
