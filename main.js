@@ -3,7 +3,7 @@ const getWeather = function(event) {
   event.preventDefault();
   const zip = document.getElementById('zipCode').value;
 //fetch request to openweather API//
-  fetch(`http://api.openweathermap.org/data/2.5/weather?zip=${zip}&units=imperial&appid=9287591cf7bfc6044c013991ec411012`)
+  fetch(`https://api.openweathermap.org/data/2.5/weather?zip=${zip}&units=imperial&appid=9287591cf7bfc6044c013991ec411012`)
 
   .then((response) => {
     return response.json();
