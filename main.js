@@ -1,9 +1,12 @@
+import {key} from './hidden.js'; 
+
 const getWeather = function(event) {
   document.getElementById('placeHolder').style.display = "none";
   event.preventDefault();
   const zip = document.getElementById('zipCode').value;
 //fetch request to openweather API//
-  fetch(`https://api.openweathermap.org/data/2.5/weather?zip=${zip}&units=imperial&appid=9287591cf7bfc6044c013991ec411012`)
+
+  fetch(`https://api.openweathermap.org/data/2.5/weather?zip=${zip}&units=imperial&appid=${key}`)
 
   .then((response) => {
     return response.json();
