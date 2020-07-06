@@ -1,4 +1,4 @@
-import {key} from './hidden.js'; 
+import {k} from './hidden.js'; 
 
 const getWeather = function(event) {
   document.getElementById('placeHolder').style.display = "none";
@@ -6,7 +6,7 @@ const getWeather = function(event) {
   const zip = document.getElementById('zipCode').value;
 //fetch request to openweather API//
 
-  fetch(`https://api.openweathermap.org/data/2.5/weather?zip=${zip}&units=imperial&appid=${key}`)
+  fetch(`https://api.openweathermap.org/data/2.5/weather?zip=${zip}&units=imperial&appid=${k}`)
 
   .then((response) => {
     return response.json();
