@@ -1,17 +1,21 @@
 import {k} from './hidden.js'; 
 
+let placeHolder = document.getElementById('placeHolder'); 
+let tempContainer = document.getElementById('tempContainer');
+
+
 const getWeather = function(event) {
-  document.getElementById('placeHolder').style.display = "none";
+  placeHolder.classList.add('display-none');
   event.preventDefault();
   const zip = document.getElementById('zipCode').value;
 //fetch request to openweather API//
 
   fetch(`https://api.openweathermap.org/data/2.5/weather?zip=${zip}&units=imperial&appid=${k}`)
-
   .then((response) => {
     return response.json();
   })
   .then((response) => {
+    tempContainer.classList.remove('display-none')
     //defining desired response.
     //assigning values to parsed data.
     console.log(response);
@@ -27,6 +31,7 @@ const getWeather = function(event) {
     document.getElementById('temp').innerText = currentTemp;
     document.getElementById('low').innerText = minTemp;
     document.getElementById('high').innerText = maxTemp;
+;
           })
 // ˚
     //catching error
